@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+</head>
+<body>
+    <h1 class="ex_00_button">즐거운 월요일</h1>
+    <button onclick="button_color_change()">클릭</button>    
+
+    <script> 
+        document.querySelector('button').addEventListener('click', function() { 
+            let h1 = document.querySelector('h1');
+            let currentColor = h1.style.color;
+            let rootColor = getComputedStyle(document.documentElement).getPropertyValue('--button_color').trim();
+
+            if (currentColor !== 'red') {
+                h1.style.color = 'red';
+            } else {
+                h1.style.color = rootColor;
+            } 
+        });
+
+    </script>     
+
+    <style>
+        :root{
+            --button_color: blue;
+        }
+        .ex_00_button {
+            color: var(--button_color);
+        }
+    </style>
+
+</body>
+</html>
