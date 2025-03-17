@@ -26,19 +26,21 @@
         console.log('Java : ' + java_score);
         console.log('Web : ' + web_score);
         console.log('Android : ' + android_score);
+        grade = null;
         if(average_score >= 90){
-            console.log("당신의 평균은 " + average_score + "점이고, A학점 입니다.");
+            grade = 'A'
         }
-        else if(average_score >= 80){
-            console.log("당신의 평균은 " + average_score + "점이고, B학점 입니다.");
+        else if(average_score >= 80){ 
+            grade = 'B';
         }
-        else if(average_score >= 70){
-            console.log("당신의 평균은 " + average_score + "점이고, C학점 입니다.");
+        else if(average_score >= 70){ 
+            grade = 'C';
         }
-        else{
-            console.log("당신의 평균은 " + average_score + "점이고, F학점 입니다.");
+        else{ 
+            grade = 'F';
         } 
-        
+        console.log("당신의 평균은 " + average_score + "점이고, " + grade +"학점 입니다.");
+
     </script>
 </body>
 </html>
