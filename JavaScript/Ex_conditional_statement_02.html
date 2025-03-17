@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let input_bg_color = prompt('배경색을 입력해주세요 : ');
+        let set_color = null;
+        if(input_bg_color == '검정'){
+            set_color = 'black';
+        }
+        else if(input_bg_color == '빨강'){
+            set_color = 'red';
+        }
+        else if(input_bg_color == '파랑'){
+            set_color = 'blue';
+        }
+        else if(input_bg_color == '노랑'){
+            set_color = 'yellow';
+        }
+        else{
+            set_color = 'white';
+        }
+        document.querySelector('body').style.backgroundColor = set_color;
+    </script>
+</body>
+</html>
