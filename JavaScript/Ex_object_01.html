@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const phone = {
+            kind : "Galaxy S23",
+            pay : "Samsung Pay",
+            call : function(){
+                console.log(`전화를 걸다`)
+            },
+            camera : function() {
+                console.log(`사진을 찍다`)
+            }
+        }
+
+        console.log(phone) 
+
+        // 기종울 출력
+        console.log(phone.kind)
+        console.log(phone['kind'])
+
+        console.log(phone.pay)
+
+        phone.camera()
+    </script>
+</body>
+</html>
