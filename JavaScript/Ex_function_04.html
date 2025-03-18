@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const checkPrimeNumber = (input) => {
+            let check = true
+            for(let i = 2; i < input; i++){
+                if(input % i == 0){
+                    check = false
+                }
+            }
+            if(check){
+                console.log(`${input}은(는) 소수입니다.`)
+            }
+            else{
+                console.log(`${input}은(는) 소수가 아닙니다.`)
+            }  
+        }
+        checkPrimeNumber(10)
+        checkPrimeNumber(7)
+        checkPrimeNumber(5)
+        checkPrimeNumber(99)
+        
+    </script>
+</body>
+</html>
