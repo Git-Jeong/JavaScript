@@ -6,6 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        const person = {
+            name : '홍길동',
+            age : '25',
+            gender : '남자',
+            address : '제주도',
+            favmov : '어벤져스, 캔팁마블 등',
+            favfood : '햄버거, 피자',
+            greerhing : function(){
+                console.log(`${this.name}님의 나이는 ${this.age}이고, 성별은 ${this.gender}입니다.`)
+                console.log(`사는 곳은 ${this.address}이고, 좋아하는 영화는 ${this.favmov}이 있습니다.`)
+                console.log(`좋아하는 음식은 ${this.favfood}입니다.`)
+            }
+        }
+
+        person.greerhing()
+    </script>
 </body>
 </html>
