@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getDivisor(input_num){
+            let result = []
+            for(let i = 1; i <= input_num; i ++){
+                if(input_num % i == 0){
+                    result.push(i)
+                }
+            }
+            
+            console.log(`${input_num}의 약수 : ${result}`)
+        }
+
+        getDivisor(10)
+        getDivisor(16)
+        getDivisor(25)
+    </script>
+</body>
+</html>
