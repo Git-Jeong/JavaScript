@@ -9,20 +9,7 @@
     <h1 class="ex_00_button">즐거운 월요일</h1>
     <button onclick="button_color_change()">클릭</button>    
 
-    <script> 
-        document.querySelector('button').addEventListener('click', function() { 
-            let h1 = document.querySelector('h1');
-            let currentColor = h1.style.color;
-            let rootColor = getComputedStyle(document.documentElement).getPropertyValue('--button_color').trim();
-
-            if (currentColor !== 'red') {
-                h1.style.color = 'red';
-            } else {
-                h1.style.color = rootColor;
-            } 
-        });
-
-    </script>     
+    <script src="./JS/Ex_first.js">  </script>     
 
     <style>
         :root{
