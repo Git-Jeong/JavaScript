@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <h1>간단한 회원가입 폼</h1>
+
+            <form name="joinForm" onsubmit="new_user(event)">
+                <table border="1">
+                    <tr>
+                        <td>아이디:</td>
+                        <td><input type="text" name="id" value="jeongjin_id" /></td>
+                    </tr>
+                    <tr>
+                        <td>패스워드:</td>
+                        <td><input type="password" name="pwd" value="1234" /></td>
+                    </tr>
+                    <tr>
+                        <td>이름:</td>
+                        <td><input type="text" name="name" value="홍길동" /></td>
+                    </tr>
+                    <tr>
+                        <td>혈액형:</td>
+                        <td>
+                            A형<input type="radio" name="blood" value="A형">
+                            B형<input type="radio" name="blood" value="B형" checked>
+                            O형<input type="radio" name="blood" value="O형">
+                            AB형<input type="radio" name="blood" value="AB형">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>번호:</td>
+                        <td><input type="text" name="phone" value="010-4569-9427" /></td>
+                    </tr>
+                    <tr>
+                        <td>생년월일:</td>
+                        <td><input type="date" name="birth" value="2023-10-02" /></td>
+                    </tr>
+                    <tr>
+                        <td>이메일:</td>
+                        <td>
+                            <input type="text" name="email" value="jeongjin9427" />
+                            <span>@</span>
+                            <select name="selectEmail" id="">
+                                <option>선택</option>
+                                <option>gmail.com</option>
+                                <option>naver.com</option>
+                                <option selected>daum.net</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"><input type="submit" value="가입완료" /></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <script src="../js/Ex_dom_06.js"> </script>
+    </body>
+</html>
