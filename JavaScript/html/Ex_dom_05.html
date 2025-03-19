@@ -6,6 +6,17 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>DOM 연습 </h1>
+    <form action="" name="frm" onsubmit="send(event)">
+        <select name="blood" onchange="sel_change()">
+            <!-- option의 value 속성은 웹 페이지에 보여지는 값과, 서버로 전달해야 되는 값이 다를 경우 사용   -->
+            <option>A</option>
+            <option>B</option>
+            <option>AB</option>
+            <option>O</option>
+        </select>
+        <input type="submit" value="전송">
+    </form>
     <script src="../js/Ex_dom_05.js"></script>
 </body>
 </html>
