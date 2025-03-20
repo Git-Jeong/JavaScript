@@ -1,4 +1,14 @@
 const reqBtn = document.getElementById('reqBtn'); 
+let temp_input_date = NaN;
+
+
+const xValues = [];
+const yValues = [];
+const barColors = [
+    "red", "green", "blue", "orange", "brown",
+    "purple", "yellow", "pink", "cyan", "lime"
+  ]; 
+
 
 reqBtn.addEventListener('click', (event) => {
     event.preventDefault();
@@ -11,7 +21,9 @@ reqBtn.addEventListener('click', (event) => {
 
     let today_string = year + '' + month  + '' + day; 
 
-    let input_date = document.getElementById('input_date').value; 
+    temp_input_date = document.getElementById('input_date').value;   
+    
+    let input_date = temp_input_date;
 
     while(true){
         //input data에서 '-' 모양을 지우는 반복문
@@ -40,7 +52,7 @@ reqBtn.addEventListener('click', (event) => {
     .then((res) => res.json())
     .then((data) => {   
         let result = data.boxOfficeResult.dailyBoxOfficeList; 
-        if(result.length != 0){
+        if(result.length != 0){   
             creat_chart(result); 
         } 
         else{
@@ -53,8 +65,44 @@ reqBtn.addEventListener('click', (event) => {
 
 });
 
-const creat_chart = (mv_list) => { 
+const creat_chart = (mv_list) => {  
+    
+    yValues.splice(0);
+    xValues.splice(0);
+
+    for(let i = 0 ; i < mv_list.length; i++){
+        xValues.push(mv_list[i].movieNm); 
+        yValues.push(mv_list[i].audiCnt); 
+    } 
+    
+
     // 누적 관객 수 이런걸 표출해 보기 
+    // 지금은 누적관객객
+    new Chart("myChart", {
+        type: "bar",
+        data: {
+          labels: xValues,
+          datasets: [{
+            backgroundColor: barColors,
+            data: yValues
+          }]
+        },
+        options: {
+          legend: {display: false},
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+            }]
+          },
+      
+          title: {
+            display: true, 
+            text: `${temp_input_date} 당일 관객 수`
+          }
+        }
+      });
 };
 
 
@@ -74,3 +122,6 @@ document.addEventListener("DOMContentLoaded", function () {
     inputDate.setAttribute("min", minDate); 
     inputDate.value = max_temp_max_today; 
 });
+
+
+ 
